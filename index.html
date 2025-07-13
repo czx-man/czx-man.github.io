@@ -96,7 +96,7 @@
         <p><strong>docker以及docker compose代理配置</strong></p>
 <p><strong>docker代理配置</strong></p>
 <p>查看v2rayn的参数</p>
-<p><img src="https://i-blog.csdnimg.cn/direct/898af8ab3d0741c6b6f5c3bdd81952ce.png#pic_center" alt="img"></p>
+<p>![](E:\boke\source_posts\docker以及docker-compose代理配置\屏幕截图 2025-07-08 203840.png)</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> mkdir -p /etc/systemd/system/docker.service.d #创建这个目录</span><br><span class="line"> </span><br><span class="line"> a  #在此目录下创建这个文件</span><br><span class="line"></span><br><span class="line">#写入代理</span><br><span class="line">[Service]</span><br><span class="line">Environment=&quot;HTTP_PROXY=http://192.168.92.1:10809&quot;</span><br><span class="line">Environment=&quot;HTTPS_PROXY=http://192.168.92.1:10809&quot;</span><br><span class="line">Environment=&quot;NO_PROXY=localhost,127.0.0.1&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
@@ -129,7 +129,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">env | grep -i proxy  #查看当前环境变量的代理配置</span><br><span class="line">curl -I https://www.google.com  #查看全局代理是否正常工作</span><br></pre></td></tr></table></figure>
 
 <p>在v2rayn上的设置</p>
-<p><img src="https://i-blog.csdnimg.cn/direct/898af8ab3d0741c6b6f5c3bdd81952ce.png#pic_center" alt="img"></p>
+<p>![](E:\boke\source_posts\docker以及docker-compose代理配置\屏幕截图 2025-07-08 203840.png)</p>
 <p>2.切换到vulhub目录下，寻找要切换的漏洞靶场路径（在此路径下使用命令）</p>
 <p>3.构建容器编译</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker compose build</span><br></pre></td></tr></table></figure>
