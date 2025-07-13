@@ -95,8 +95,8 @@
       
         <p><strong>docker以及docker compose代理配置</strong></p>
 <p><strong>docker代理配置</strong></p>
-<p>查看v2rayn的参数</p>
-<p>![](E:\boke\source_posts\docker以及docker-compose代理配置\屏幕截图 2025-07-08 203840.png)</p>
+<p>查看v2rayn的参数s</p>
+<p><img src="/2025/07/13/docker%E4%BB%A5%E5%8F%8Adocker-compose%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/a.png" alt="a"> </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> mkdir -p /etc/systemd/system/docker.service.d #创建这个目录</span><br><span class="line"> </span><br><span class="line"> a  #在此目录下创建这个文件</span><br><span class="line"></span><br><span class="line">#写入代理</span><br><span class="line">[Service]</span><br><span class="line">Environment=&quot;HTTP_PROXY=http://192.168.92.1:10809&quot;</span><br><span class="line">Environment=&quot;HTTPS_PROXY=http://192.168.92.1:10809&quot;</span><br><span class="line">Environment=&quot;NO_PROXY=localhost,127.0.0.1&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
@@ -129,7 +129,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">env | grep -i proxy  #查看当前环境变量的代理配置</span><br><span class="line">curl -I https://www.google.com  #查看全局代理是否正常工作</span><br></pre></td></tr></table></figure>
 
 <p>在v2rayn上的设置</p>
-<p>![](E:\boke\source_posts\docker以及docker-compose代理配置\屏幕截图 2025-07-08 203840.png)</p>
+<p><img src="/2025/07/13/docker%E4%BB%A5%E5%8F%8Adocker-compose%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/a.png" alt="a"> </p>
 <p>2.切换到vulhub目录下，寻找要切换的漏洞靶场路径（在此路径下使用命令）</p>
 <p>3.构建容器编译</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker compose build</span><br></pre></td></tr></table></figure>
@@ -171,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/07/13/docker%E4%BB%A5%E5%8F%8Adocker-compose%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/" data-id="cmd1omw8m0000a8v55nnvbwy3" data-title="docker以及docker compose代理配置" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/07/13/docker%E4%BB%A5%E5%8F%8Adocker-compose%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/" data-id="cmd1qsfgv0000wcv54y2f2r6w" data-title="docker以及docker compose代理配置" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
